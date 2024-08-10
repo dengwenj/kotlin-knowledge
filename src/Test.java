@@ -15,7 +15,5 @@ public class Test {
         Set<String> strings = map.keySet();
         System.out.println(list);
         System.out.println(strings);
-
-
     }
 }
