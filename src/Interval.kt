@@ -1,6 +1,11 @@
 fun main() {
     // 1 到 10 这个区间
-    1..10
+    val intRange = 1..10
+    val toList = intRange.toMutableList()
+    toList.add(0)
+    toList.forEach {
+        println("$it")
+    }
 
     100..<1000
 
