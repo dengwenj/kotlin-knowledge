@@ -5,9 +5,16 @@ fun main() {
 
     val a1 = A()
     a1.eat()
+
+    var js = E.JS
+    if (js == E.JS) {
+        println(js)
+    }
 }
 
-class A constructor(test: String, test2: String? = null) {
+// 默认是不可以被继承的，默认是 public final
+// internal 只能同模块访问
+internal class A constructor(test: String, test2: String? = null) {
     private var hello: String = test
 
     constructor() : this("hello", "哈哈哈哈哈哈哈")
@@ -36,3 +43,12 @@ class A constructor(test: String, test2: String? = null) {
         println(str1?.length)
     }
 }
+
+// 枚举
+@MyAnnotation("你好")
+enum class E {
+    Node, JS, Java, Kotlin
+}
+
+// 注解
+annotation class MyAnnotation(val p: String)
