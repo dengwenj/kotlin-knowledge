@@ -4,12 +4,15 @@ fun main() {
 
     println(10 sum3 20) // 30
 
-    sum4(100, 200, {
-        println(it)
-    })
-
-    sum4(100, 200) {
-        println(it) // 300
+//    sum4(100, 200, {
+//        println(it)
+//    })
+//
+//    sum4(100, 200) {
+//        println(it) // 300
+//    }
+    sum4(1, 2) { a, b ->
+        println("$a + $b")
     }
 
     // 参数只有一个的话可以省略()， {} 这是个函数
@@ -34,12 +37,13 @@ fun main() {
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
+
 fun sum2(a: Int, b: Int) = a + b
 
 infix fun Int.sum3(a: Int) = this + a
 
-fun sum4(a: Int, b: Int, c: (d: Int) -> Unit) {
-     c(a + b)
+fun sum4(a: Int, b: Int, c: (d: Int, gg: Int) -> Unit) {
+    c(a + b, 1)
 }
 
 fun sum5(a: (Int) -> Unit) {

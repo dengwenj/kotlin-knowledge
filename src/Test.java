@@ -22,9 +22,17 @@ public class Test {
         System.out.println("D2.getA() = " + D2.getA());
         System.out.println("D2.b = " + D2.b);
         D2.test("视界");
+
+        O.INSTANCE.test();
+        System.out.println("O.a = " + O.a);
+        System.out.println("O.b = " + O.b);
     }
 
     interface A {
         public abstract void aa();
+    }
+
+    public interface Call {
+        public void loading();
     }
 }
