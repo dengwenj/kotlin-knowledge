@@ -15,6 +15,13 @@ public class Test {
         Set<String> strings = map.keySet();
         System.out.println(list);
         System.out.println(strings);
+
+        D d = new D("ww", 19);
+        System.out.println(d);
+
+        System.out.println("D2.getA() = " + D2.getA());
+        System.out.println("D2.b = " + D2.b);
+        D2.test("视界");
     }
 
     interface A {
