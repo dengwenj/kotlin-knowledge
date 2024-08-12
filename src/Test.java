@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -26,6 +23,8 @@ public class Test {
         O.INSTANCE.test();
         System.out.println("O.a = " + O.a);
         System.out.println("O.b = " + O.b);
+
+        new EEEE().ee(DDDD::tt);
     }
 
     interface A {
@@ -34,5 +33,22 @@ public class Test {
 
     public interface Call {
         public void loading();
+    }
+}
+
+class DDDD {
+    public void tt() {
+        System.out.println("tt");
+    }
+}
+
+interface Fn {
+    void f(DDDD dddd);
+}
+
+class EEEE {
+    public void ee(Fn fn) {
+        fn.f(new DDDD());
+        System.out.println("eee");
     }
 }
