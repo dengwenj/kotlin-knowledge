@@ -16,4 +16,8 @@ public class Test {
         System.out.println(list);
         System.out.println(strings);
     }
+
+    interface A {
+        public abstract void aa();
+    }
 }
