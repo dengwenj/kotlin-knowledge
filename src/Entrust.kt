@@ -2,6 +2,10 @@ fun main() {
     val en1 = En1(EDemoImpl(), EDemo1Impl())
     println(en1.getByIds()) // [1, 2, 3]
     println(en1.getList()) // [a, b, c]
+
+    val ee = EE()
+    ee.t // 1 2 3 true
+    ee.t // true
 }
 
 interface EDemo {
@@ -30,3 +34,14 @@ class En1(eDemoImpl: EDemo, eDemo1Impl: EDemo1Impl) : EDemo by eDemoImpl, EDemo1
         println("test()")
     }
 }
+
+class EE {
+    val t: Boolean by lazy {
+        println("1")
+        println("2")
+        println("3")
+        true
+    }
+}
+
+// 属性的监听委托
